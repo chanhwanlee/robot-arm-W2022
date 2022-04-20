@@ -1,0 +1,4 @@
+load STM32F401RETx 
+project name STCubeGenerated 
+project toolchain "MDK-ARM V5" 
+project path "C:\Users\minds\Desktop\6Dof_Robot_Arm\STM32CubeExpansion-SPN2_V1.1.0\Projects\MDK-ARM\RTE\Device\STM32F401RETx\" 

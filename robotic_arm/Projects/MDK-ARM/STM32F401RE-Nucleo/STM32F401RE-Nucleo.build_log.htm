@@ -1,0 +1,252 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jiwon Ha, UWaterloo, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Program Files (x86)\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+N:\industrial-automation-cooper_testing_F2021\industrial-automation-cooper_testing_F2021\robotic_arm\Projects\MDK-ARM\Project.uvprojx
+Project File Date:  04/15/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Program Files (x86)\ARM\ARMCC\Bin'
+Rebuild target 'STM32F401RE-Nucleo'
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_adc_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_adc.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_spi.c...
+compiling L6470.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling xnucleoihm02a1_interface.c...
+..\..\Drivers\BSP\X-NUCLEO-IHM02A1\NUCLEO-F401RE\xnucleoihm02a1_interface.c(114): warning:  #550-D: variable "RCC_OscInitStruct"  was set but never used
+    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+..\..\Drivers\BSP\X-NUCLEO-IHM02A1\NUCLEO-F401RE\xnucleoihm02a1_interface.c(115): warning:  #550-D: variable "RCC_ClkInitStruct"  was set but never used
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+..\..\Drivers\BSP\X-NUCLEO-IHM02A1\NUCLEO-F401RE\xnucleoihm02a1_interface.c: 2 warnings, 0 errors
+compiling stm32f4xx_nucleo.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling xnucleoihm02a1.c...
+compiling params.c...
+assembling startup_stm32f401xe.s...
+compiling stm32f4xx_hal_tim.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_it.c...
+compiling homing.c...
+..\Src\homing.c(102): warning:  #177-D: variable "buffer"  was declared but never referenced
+  	uint8_t buffer[10];
+..\Src\homing.c(103): warning:  #177-D: variable "data"  was declared but never referenced
+  	uint8_t data[6];
+..\Src\homing.c(82): warning:  #177-D: function "SystemClock_Config"  was declared but never referenced
+  	static void SystemClock_Config(void);
+..\Src\homing.c: 3 warnings, 0 errors
+compiling timer.c...
+timer.c(31): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(angle<0){angle=0;}
+timer.c: 1 warning, 0 errors
+compiling example_usart.c...
+..\Src\example_usart.c(784): warning:  #550-D: variable "HexFormat"  was set but never used
+  	eHexFormat HexFormat;
+..\Src\example_usart.c: 1 warning, 0 errors
+compiling main.c...
+..\Src\main.c(160): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float px = nextPoint[0], py = nextPoint[1], pz = nextPoint[2] + 152.4 - 45;
+..\Src\main.c(193): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      if(angle12 < 0.16) // the height of the limit switch
+..\Src\main.c(218): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(221): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(230): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(1), L6470_DIR_FWD_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(233): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(1), L6470_DIR_REV_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(243): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(246): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(256): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(1), L6470_DIR_REV_ID, STEPS_PER_RAD_WRIST*d_angle34); 
+..\Src\main.c(259): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(1), L6470_DIR_FWD_ID, STEPS_PER_RAD_WRIST*d_angle34); 
+..\Src\main.c(156): warning:  #550-D: variable "d_angle45"  was set but never used
+  		float d_angle01 = 0, d_angle12 = 0, d_angle23 = 0, d_angle34 = 0, d_angle45 = 0;
+..\Src\main.c(158): warning:  #550-D: variable "c_angle34"  was set but never used
+  		float c_angle01 = currentAngles[0], c_angle12 = currentAngles[1], c_angle23 = currentAngles[2], c_angle34 = currentAngles[3], c_angle45 = currentAngles[4];
+..\Src\main.c(164): warning:  #177-D: variable "ux"  was declared but never referenced
+      float ux = 0, uy = 0, uz = -1;
+..\Src\main.c(164): warning:  #177-D: variable "uy"  was declared but never referenced
+      float ux = 0, uy = 0, uz = -1;
+..\Src\main.c(166): warning:  #177-D: variable "vx"  was declared but never referenced
+      float vx = 0, vy = 1, vz = 0;
+..\Src\main.c(166): warning:  #177-D: variable "vy"  was declared but never referenced
+      float vx = 0, vy = 1, vz = 0;
+..\Src\main.c(346): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if(-1*(M_PI-angle23) < currentAngles[2]) //and the final angle is smaller than the current angle
+..\Src\main.c(368): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		d_angle23 = -1*(M_PI - angle23) + d_angle12 - c_angle23;
+..\Src\main.c(380): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(383): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(393): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(EXPBRD_ID(0), L6470_ID(1), L6470_DIR_FWD_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(397): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(EXPBRD_ID(0), L6470_ID(1), L6470_DIR_REV_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(408): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(412): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(450): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		currentAngles[2] = -1*(M_PI - angle23);
+..\Src\main.c(457): warning:  #940-D: missing return statement at end of non-void function "MoveNextPoint3" 
+  }
+..\Src\main.c(312): warning:  #550-D: variable "d_angle34"  was set but never used
+  		float d_angle01 = 0, d_angle12 = 0, d_angle23 = 0, d_angle34 = 0, d_angle45 = 0;
+..\Src\main.c(312): warning:  #550-D: variable "d_angle45"  was set but never used
+  		float d_angle01 = 0, d_angle12 = 0, d_angle23 = 0, d_angle34 = 0, d_angle45 = 0;
+..\Src\main.c(314): warning:  #177-D: variable "c_angle34"  was declared but never referenced
+  		float c_angle01 = currentAngles[0], c_angle12 = currentAngles[1], c_angle23 = currentAngles[2], c_angle34 = currentAngles[3], c_angle45 = currentAngles[4];
+..\Src\main.c(320): warning:  #177-D: variable "ux"  was declared but never referenced
+      float ux = orientation[0][0], uy = orientation[0][1], uz = orientation[0][2];
+..\Src\main.c(320): warning:  #177-D: variable "uy"  was declared but never referenced
+      float ux = orientation[0][0], uy = orientation[0][1], uz = orientation[0][2];
+..\Src\main.c(322): warning:  #177-D: variable "vx"  was declared but never referenced
+      float vx = orientation[1][0], vy = orientation[1][1], vz = orientation[1][2];
+..\Src\main.c(322): warning:  #177-D: variable "vy"  was declared but never referenced
+      float vx = orientation[1][0], vy = orientation[1][1], vz = orientation[1][2];
+..\Src\main.c(326): warning:  #177-D: variable "asin_num_frac1"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(326): warning:  #177-D: variable "asin_num_frac2"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(326): warning:  #177-D: variable "asin_num_frac3"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(326): warning:  #177-D: variable "asin_denom_frac1"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(326): warning:  #177-D: variable "asin_denom_frac2"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(520): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if(-1*(M_PI-angle23) < currentAngles[2]) //and the final angle is smaller than the current angle
+..\Src\main.c(542): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		d_angle23 = -1*(M_PI - angle23) + d_angle12 - c_angle23;
+..\Src\main.c(553): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(556): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board1, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_BASE*d_angle01);
+..\Src\main.c(566): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(EXPBRD_ID(0), L6470_ID(1), L6470_DIR_FWD_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(570): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(EXPBRD_ID(0), L6470_ID(1), L6470_DIR_REV_ID, STEPS_PER_RAD_HUM*d_angle12);
+..\Src\main.c(581): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_REV_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(585): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			StepperMotorBoardHandle->Command->Move(board2, L6470_ID(0), L6470_DIR_FWD_ID, STEPS_PER_RAD_ULN*d_angle23); 
+..\Src\main.c(623): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		currentAngles[2] = -1*(M_PI - angle23);
+..\Src\main.c(630): warning:  #940-D: missing return statement at end of non-void function "MoveNextPoint2" 
+  }
+..\Src\main.c(486): warning:  #550-D: variable "d_angle34"  was set but never used
+  		float d_angle01 = 0, d_angle12 = 0, d_angle23 = 0, d_angle34 = 0, d_angle45 = 0;
+..\Src\main.c(486): warning:  #550-D: variable "d_angle45"  was set but never used
+  		float d_angle01 = 0, d_angle12 = 0, d_angle23 = 0, d_angle34 = 0, d_angle45 = 0;
+..\Src\main.c(488): warning:  #177-D: variable "c_angle34"  was declared but never referenced
+  		float c_angle01 = currentAngles[0], c_angle12 = currentAngles[1], c_angle23 = currentAngles[2], c_angle34 = currentAngles[3], c_angle45 = currentAngles[4];
+..\Src\main.c(494): warning:  #177-D: variable "ux"  was declared but never referenced
+      float ux = 0, uy = 0, uz = -1;
+..\Src\main.c(494): warning:  #177-D: variable "uy"  was declared but never referenced
+      float ux = 0, uy = 0, uz = -1;
+..\Src\main.c(496): warning:  #177-D: variable "vx"  was declared but never referenced
+      float vx = 0, vy = 1, vz = 0;
+..\Src\main.c(496): warning:  #177-D: variable "vy"  was declared but never referenced
+      float vx = 0, vy = 1, vz = 0;
+..\Src\main.c(500): warning:  #177-D: variable "asin_num_frac1"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(500): warning:  #177-D: variable "asin_num_frac2"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(500): warning:  #177-D: variable "asin_num_frac3"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(500): warning:  #177-D: variable "asin_denom_frac1"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(500): warning:  #177-D: variable "asin_denom_frac2"  was declared but never referenced
+      float asin_num_frac1 = 0, asin_num_frac2 = 0, asin_num_frac3 = 0, asin_denom_frac1 = 0, asin_denom_frac2 = 0;
+..\Src\main.c(660): warning:  #177-D: variable "points"  was declared but never referenced
+  		float* points[100];
+..\Src\main.c(774): warning:  #9-D: nested comment is not allowed
+  				/*
+..\Src\main.c(818): warning:  #9-D: nested comment is not allowed
+  				/*
+..\Src\main.c(924): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  								USART_Transmit(&huart2, input);
+..\Src\main.c(877): warning:  #177-D: variable "rand"  was declared but never referenced
+  		 int restart = 0, prev_point = 0, size = 5, rand = 1;  
+..\Src\main.c(878): warning:  #177-D: variable "input2"  was declared but never referenced
+  		 char string[50], input[13], input2[13];
+..\Src\main.c(879): warning:  #177-D: variable "rest2"  was declared but never referenced
+  		 char* rest, *rest2;
+..\Src\main.c(1004): warning:  #177-D: variable "hold_message"  was declared but never referenced
+  		uint8_t hold_message[4];
+..\Src\main.c(1027): warning:  #177-D: variable "nextPoint"  was declared but never referenced
+  		float currentAngles[5] = {0}, currentPoint[3] = {0}, nextPoint[3] = {0};
+..\Src\main.c(1028): warning:  #177-D: variable "error"  was declared but never referenced
+  		char string[50], error[15] = "Invalid input";
+..\Src\main.c(58): warning:  #177-D: function "MX_USART1_UART_Init"  was declared but never referenced
+  static void MX_USART1_UART_Init(void);
+..\Src\main.c: 71 warnings, 0 errors
+linking...
+Program Size: Code=28128 RO-data=3216 RW-data=932 ZI-data=1524  
+FromELF: creating hex file...
+After Build - User command #1: C:\Program Files (x86)\\ARM\ARMCC\bin\fromelf.exe --bin --output=N:\industrial-automation-cooper_testing_F2021\industrial-automation-cooper_testing_F2021\robotic_arm\Projects\MDK-ARM\STM32F401RE-Nucleo\STM32F401RE-Nucleo.bin .\STM32F401RE-Nucleo\STM32F401RE-Nucleo.axf
+".\STM32F401RE-Nucleo\STM32F401RE-Nucleo.axf" - 0 Error(s), 78 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32F401RE-Nucleo
+  C:\Program Files (x86)\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Program Files (x86)\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Build Time Elapsed:  00:00:07
+</pre>
+</body>
+</html>

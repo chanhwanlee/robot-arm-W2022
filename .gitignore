@@ -1,0 +1,21 @@
+// debugging files
+*.su
+*.dbgconf
+
+// compiled binaries
+*.hex
+*.bin
+*.d
+*.crf
+*.o
+
+// logs
+*.log
+
+// python caches
+__pycache__
+*.swp
+*.pyc
+
+// vscode settings
+.vscode
