@@ -1031,17 +1031,6 @@ int main(void){
 		Home_Arm(currentAngles, currentPoint);
 		while(!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_0));
 		
-		TrajectoryPlanning(currentPoint, currentAngles);
-
-		/*
-		nextPoint[0] = 300;
-		nextPoint[1] = 200;
-		nextPoint[2] = 150;
-		
-		
-		LinearMove(currentPoint, nextPoint, currentAngles);
-		*/
-		/*
 		while(1) {
 			
 			HAL_UART_Receive(&huart2, hold_message, 4, HAL_MAX_DELAY);
@@ -1123,7 +1112,6 @@ int main(void){
 	
 		MoveNextPoint2(currentAngles, currentPoint, nextPoint);
 	}
-	*/
 }
 
 //------------------------------------------------------------------
